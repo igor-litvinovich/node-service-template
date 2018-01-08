@@ -1,8 +1,8 @@
 const SampleService = require('./../services/sample');
 
 module.exports = [
-    {
-        name: 'sampleService',
-        instance: SampleService
-    },
+  {
+    name: 'sampleService',
+    instance: SampleService,
+  },
 ];
