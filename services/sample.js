@@ -1,9 +1,9 @@
 const BaseService = require('./base');
 
 class SampleService extends BaseService {
-    constructor(repository) {
-        super(repository);
-    }
+  constructor(repository) {
+    super(repository);
+  }
 }
 
 module.exports = SampleService;
