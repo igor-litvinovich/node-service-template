@@ -21,5 +21,11 @@
     "outputPath": "logs/",
     "fileNameDateFormat": "DD-MM-YYYY",
     "fileNamePrefix": "sevice-"
+  },
+  "middleware": {
+    "EXCLUDE_FILES": [
+      "index.js",
+      "error.js"
+    ]
   }
 }

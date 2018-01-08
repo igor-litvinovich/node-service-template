@@ -1,7 +1,7 @@
 const BaseService = require('./base');
 
 class SampleService extends BaseService {
-    constructor({logger}) {
+    constructor({ logger }) {
         super();
     }
 }

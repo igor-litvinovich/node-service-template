@@ -1,7 +1,5 @@
 class BaseService {
-    constructor() {
-
-    }
+  constructor() {}
 }
 
 module.exports = BaseService;

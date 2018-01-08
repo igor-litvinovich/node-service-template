@@ -17,5 +17,10 @@
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "noogger": "^0.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0"
   }
 }

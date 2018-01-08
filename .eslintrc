@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-useless-constructor": "warn",
+    "no-underscore-dangle": ["warn", { "allowAfterThis": true }],
+    "max-len": ["warn",{"code": 130}],
+    "global-require": "warn",
+    "import/no-dynamic-require": "warn"
+  }
+}
