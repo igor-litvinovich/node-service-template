@@ -3,23 +3,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('noogger').init(config.get('loggerParams'));
 const router = require('./api/router');
-const applyMiddlewares = require('./middlewares');
+const applyMiddleware = require('./middlewares');
+const registerDependencies = require('./di');
 
-const SampleService = require('./services/sample');
-const SampleController = require('./api/controllers/sample');
-
-let app = express();
+const container = registerDependencies();
+const apiRouter = router(container.resolve('controllersMap'), logger);
+const app = express();
 app.set('logger', logger);
-applyMiddlewares(app);
+applyMiddleware(app);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
-const sampleService = new SampleService(logger);
-const sampleController = new SampleController(sampleService);
-const controllersMap = {sampleController};
-
-app.use('/api/v1',  router(controllersMap, logger));
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/api/v1', apiRouter);
 
 app.listen(config.appSettings.port, () => logger.info(`Application is listening on port ${config.appSettings.port}`));

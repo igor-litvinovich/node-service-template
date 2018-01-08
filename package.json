@@ -9,15 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "awilix": "^3.0.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "config": "^1.26.2",
     "express": "^4.15.3",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
-    "noogger": "^0.1.7",
-    "querystring": "^0.2.0",
-    "stream": "0.0.2",
-    "twitter": "^1.7.1"
+    "noogger": "^0.1.7"
   }
 }

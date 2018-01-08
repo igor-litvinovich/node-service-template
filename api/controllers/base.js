@@ -2,8 +2,9 @@ const _ = require('lodash');
 const config = require('config');
 
 class BaseController {
-    constructor(service) {
+    constructor(service, logger) {
         this._service = service;
+        this.logger = logger;
     }
 
     async _validateParams(params, requiredFields = []) {

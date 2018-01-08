@@ -1,8 +1,8 @@
 [
   {
     "method": "get",
-    "url": "/generateReport",
+    "url": "/sampleRequest",
     "controller": "sampleController",
-    "action": "generateReport"
+    "action": "sampleRequest"
   }
 ]
