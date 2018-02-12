@@ -19,4 +19,9 @@ app.use('/api/v1', apiRouter);
 
 app.use(errorMiddleware);
 
-app.listen(config.appSettings.port, () => logger.info(`Application is listening on port ${config.appSettings.port}`));
+app.listen(config.appSettings.port, async () => {
+  const dbContext = container.resolve('dbContext');
+  await dbContext.establishConnection();
+  logger.info(`Application is listening on port ${config.appSettings.port}`);
+  logger.info(`Environment: ${process.env.NODE_ENV}`);
+});

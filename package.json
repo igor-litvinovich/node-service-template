@@ -16,6 +16,8 @@
     "express": "^4.15.3",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
+    "mongoose": "^5.0.4",
+    "mongoose-paginate": "^5.0.3",
     "noogger": "^0.1.7"
   },
   "devDependencies": {

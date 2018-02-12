@@ -1,9 +1,8 @@
-const SampleController = require('./../api/controllers/sample');
+const JobController = require('./../api/controllers/job');
 
 module.exports = [
   {
-    name: 'sampleController',
-    instance: SampleController,
-  },
-
+    name: 'jobController',
+    instance: JobController,
+  }
 ];

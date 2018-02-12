@@ -21,5 +21,16 @@
     "outputPath": "logs/",
     "fileNameDateFormat": "DD-MM-YYYY",
     "fileNamePrefix": "sevice-"
+  },
+  "db": {
+    "HOST": "localhost",
+    "PORT": "27017",
+    "NAME": "job",
+    "TIMEOUT": "50000"
+  },
+  "dbQueryDefaultParams" : {
+    "pagination" : {
+      "limit": 1000
+    }
   }
 }

@@ -1,8 +1,8 @@
-const SampleService = require('./../services/sample');
+const JobService = require('./../services/job');
 
 module.exports = [
   {
-    name: 'sampleService',
-    instance: SampleService,
+    name: 'jobService',
+    instance: JobService,
   },
 ];
