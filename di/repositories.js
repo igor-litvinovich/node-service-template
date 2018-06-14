@@ -1,12 +1,12 @@
 const BaseRepository = require('./../dal/repositories/base');
-const JobRepository = require('./../dal/repositories/job');
+const UserRepository = require('./../dal/repositories/user');
 
 module.exports = [
-  {
-    name: 'baseRepository',
-    instance: BaseRepository,
-  }, {
-    name: 'jobRepository',
-    instance: JobRepository,
-  },
+    {
+        name: 'baseRepository',
+        instance: BaseRepository,
+    }, {
+        name: 'userRepository',
+        instance: UserRepository,
+    },
 ];

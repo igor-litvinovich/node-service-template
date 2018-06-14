@@ -25,7 +25,7 @@
   "db": {
     "HOST": "localhost",
     "PORT": "27017",
-    "NAME": "job",
+    "NAME": "dbName",
     "TIMEOUT": "50000"
   },
   "dbQueryDefaultParams" : {

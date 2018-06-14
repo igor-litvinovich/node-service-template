@@ -1,8 +1,8 @@
-const JobController = require('./../api/controllers/job');
+const AuthorizationController = require('./../api/controllers/authorization');
 
 module.exports = [
-  {
-    name: 'jobController',
-    instance: JobController,
-  }
+    {
+        name: 'authorizationController',
+        instance: AuthorizationController,
+    },
 ];

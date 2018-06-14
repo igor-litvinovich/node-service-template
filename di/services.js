@@ -1,8 +1,8 @@
-const JobService = require('./../services/job');
+const AuthorizationService = require('../services/authorization');
 
 module.exports = [
-  {
-    name: 'jobService',
-    instance: JobService,
-  },
+    {
+        name: 'authorizationService',
+        instance: AuthorizationService,
+    },
 ];

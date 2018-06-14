@@ -1,7 +1,4 @@
 {
   "JOB": "Job",
-  "PROJECT": "Project",
-  "COMPANY": "Company",
-  "PERSON": "Person",
-  "HISTORY": "History"
+  "USER": "User"
 }

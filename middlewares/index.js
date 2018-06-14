@@ -7,13 +7,14 @@ module.exports = (app) => {
   try {
     const files = fs.readdirSync(__dirname, {});
     if (Array.isArray(files)) {
-      files.filter(fileName => !filesToIgnore.includes(fileName))
+      files.filter(fileName => !filesToIgnore.includes(fileName) && !fileName.includes('.json'))
         .forEach((file) => {
           const middleware = require(`./${file}`);
           app.use(middleware);
         });
     }
   } catch (error) {
-    logger.error(Error(config.error.MIDDLEWARE_ERROR));
+    logger.error(Error(config.errors.MIDDLEWARE_ERROR, error.message));
+    throw error;
   }
 };

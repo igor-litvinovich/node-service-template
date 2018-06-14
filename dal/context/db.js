@@ -64,7 +64,7 @@ class DbContext {
 
   _connect() {
     const uri = this._getMongoDbUri();
-    return this.database.connect(uri, { useMongoClient: true }).catch(() => {});
+    return this.database.connect(uri).catch(() => {});
   }
 
   _getMongoDbUri() {

@@ -1,8 +1,14 @@
 [
   {
     "method": "get",
-    "url": "/sampleRequest",
-    "controller": "sampleController",
-    "action": "sampleRequest"
+    "url": "/users",
+    "controller": "authorizationController",
+    "action": "getAll"
+  },
+  {
+    "method": "post",
+    "url": "/login",
+    "controller": "authorizationController",
+    "action": "signUp"
   }
 ]

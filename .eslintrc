@@ -5,6 +5,9 @@
     "no-underscore-dangle": ["warn", { "allowAfterThis": true }],
     "max-len": ["warn",{"code": 130}],
     "global-require": "warn",
-    "import/no-dynamic-require": "warn"
+    "import/no-dynamic-require": "warn",
+    "linebreak-style": "off",
+    "class-methods-use-this":"warn",
+    "indent":"off"
   }
 }

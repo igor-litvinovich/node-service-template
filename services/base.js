@@ -1,10 +1,21 @@
+const _ = require('lodash');
+
 class BaseService {
   constructor(entityRepository) {
     this._repository = entityRepository;
   }
 
   async getAll(params) {
-    const documents = await this._repository.get(params);
+    const paginationOptions = _.pick(params, ['limit', 'offset', 'page']);
+    const queryParams = _.omit(params, Object.keys(paginationOptions));
+    const mappedPaginationParams = _.mapValues(paginationOptions, (option) => {
+       const num = Number(option);
+       if (Number.isNaN(num)) {
+           return option;
+       }
+       return num;
+    });
+    const documents = await this._repository.get(queryParams, mappedPaginationParams);
     return documents;
   }
 

@@ -7,11 +7,11 @@ class BaseRepository {
     this._model = model;
   }
 
-  async get(query = {}) {
+  async get(query = {}, paginationOprions = {}) {
     const defaultPaginationParams = config.get('dbQueryDefaultParams.pagination');
     const customPaginationParams = this._getPaginationParams();
     const sort = this._getSortingParams();
-    const paginationParams = Object.assign({}, defaultPaginationParams, customPaginationParams);
+    const paginationParams = Object.assign({}, defaultPaginationParams, customPaginationParams, paginationOprions);
     const options = { sort, ...paginationParams };
     return this._model.paginate(query, options);
   }

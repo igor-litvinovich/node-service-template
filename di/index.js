@@ -1,4 +1,6 @@
 const config = require('config');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const logger = require('noogger').init(config.get('loggerParams'));
 const { createContainer, asClass, asValue } = require('awilix');
 const controllers = require('./controllers');
@@ -19,6 +21,12 @@ module.exports = () => {
   const container = createContainer();
   container.register({
     logger: asValue(logger),
+  });
+  container.register({
+      bcrypt: asValue(bcrypt),
+  });
+  container.register({
+      jwt: asValue(jwt),
   });
 
   container.register(convertArrayToObject(controllers, asClass));
