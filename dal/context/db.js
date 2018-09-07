@@ -64,7 +64,9 @@ class DbContext {
 
   _connect() {
     const uri = this._getMongoDbUri();
-    return this.database.connect(uri).catch(() => {});
+    return this.database.connect(uri, { useNewUrlParser: true }).catch((error) => {
+      this.logger.error(`MongoDB connection error: ${error.message}`);
+    });
   }
 
   _getMongoDbUri() {
@@ -80,4 +82,3 @@ class DbContext {
 }
 
 module.exports = DbContext;
-
