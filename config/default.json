@@ -32,5 +32,22 @@
     "pagination" : {
       "limit": 1000
     }
+  },
+  "auth": {
+    "vk": {
+      "callbackURL": "/api/v1/auth-vk-callback",
+      "scope": "friends photos",
+      "clientSecret": "3Prkj22TQyM3WAydRTQy",
+      "clientID": "5669557"
+    }
+  },
+  "session" : {
+    "name": "face.sid",
+    "secret": "d1d8fde4eaa4155baaaadcaa4707d8ea",
+    "resave": false,
+    "saveUninitialized": true,
+    "cookie": {
+      "path": "/", "secure": false, "maxAge": 14400000, "sameSite": false
+    }
   }
 }

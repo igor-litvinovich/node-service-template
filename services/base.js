@@ -38,6 +38,19 @@ class BaseService {
     const documents = await this._repository.deleteById(id);
     return documents;
   }
+
+  async findOrCreate(newEntity) {
+    const entiry = await this.model.findOne(newEntity);
+    if (entiry) {
+      return entiry;
+    }
+    const document = await this.create(newEntity);
+    return document;
+  }
+
+  get model() {
+    return this._repository._model;
+  }
 }
 
 module.exports = BaseService;

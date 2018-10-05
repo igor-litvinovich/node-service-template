@@ -10,14 +10,13 @@ const user = new Schema({
         type: String,
         default: () => new mongoose.Types.ObjectId(),
     },
-    username: {
+    accessToken: {
         type: String,
     },
-    password: {
-        type: String,
+    profile: {
+      type: Object,
     },
 });
 
 user.plugin(mongoosePaginate);
-
 module.exports = mongoose.model(models.USER, user);

@@ -5,9 +5,16 @@ class AuthorizationController extends BaseController {
     super(authorizationService, logger);
   }
 
+  async authCallback(req, res) {
+      // TODO Add mapping from reqest model to view model
+      const result = await this._service.signUp(req.user);
+      this.logger.info(result);
+      res.status(201).send(result);
+  }
+
   async signUp(req, res) {
-    const params = await this._validateParams(req.body, ['username', 'password']);
-    const result = await this._service.signUp(params);
+    // TODO Add mapping from reqest model to view model
+    const result = await this._service.signUp(req.user);
     this.logger.info(result);
     res.status(201).json(result);
   }

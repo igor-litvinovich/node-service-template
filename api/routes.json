@@ -6,9 +6,36 @@
     "action": "getAll"
   },
   {
-    "method": "post",
+    "method": "get",
+    "url": "/auth-vk-callback",
+    "controller": "authorizationController",
+    "action": "authCallback",
+    "middlewares": [
+      {
+        "diName": "authenticationManager",
+        "isRoot": false,
+        "propertyPath": "authenticate",
+        "shouldBeInvoked": true,
+        "args":["vkontakte", {
+          "successRedirect": "/",
+          "failureRedirect": "/login"
+        }]
+      }
+    ]
+  },
+  {
+    "method": "get",
     "url": "/login",
     "controller": "authorizationController",
-    "action": "signUp"
+    "action": "signUp",
+    "middlewares": [
+      {
+        "diName": "authenticationManager",
+        "isRoot": false,
+        "propertyPath": "authenticate",
+        "shouldBeInvoked": true,
+        "args":["vkontakte"]
+      }
+    ]
   }
 ]
