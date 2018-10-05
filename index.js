@@ -5,11 +5,10 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const logger = require('noogger').init(config.get('loggerParams'));
 const router = require('./api/router');
-const registerDependencies = require('./di');
+const container = require('./di');
 const applyMiddleware = require('./middlewares');
 const errorMiddleware = require('./middlewares/error');
 
-const container = registerDependencies();
 const apiRouter = router(container.resolve('controllersMap'), logger, container);
 const authenticationManager = container.resolve('authenticationManager');
 const app = express();

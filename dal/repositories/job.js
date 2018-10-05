@@ -1,4 +1,4 @@
-const Job = require('../models/job');
+const Job = require('../schemas/job');
 const BaseRepository = require('./base');
 
 class JobRepository extends BaseRepository {

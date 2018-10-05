@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../schemas/user');
 const BaseRepository = require('./base');
 
 class UserRepository extends BaseRepository {

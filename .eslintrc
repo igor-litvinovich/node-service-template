@@ -8,6 +8,8 @@
     "import/no-dynamic-require": "warn",
     "linebreak-style": "off",
     "class-methods-use-this":"warn",
-    "indent":"off"
+    "indent":"off",
+    "comma-dangle":"off",
+    "eol-last": "off"
   }
 }
