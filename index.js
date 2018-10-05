@@ -9,6 +9,7 @@ const container = require('./di');
 const applyMiddleware = require('./middlewares');
 const errorMiddleware = require('./middlewares/error');
 
+
 const apiRouter = router(container.resolve('controllersMap'), logger, container);
 const authenticationManager = container.resolve('authenticationManager');
 const app = express();
@@ -31,3 +32,4 @@ app.listen(config.appSettings.port, async () => {
 logger.info(`Application is listening on port ${config.appSettings.port}`);
 logger.info(`Environment: ${process.env.NODE_ENV}`);
 });
+const smth = require('./common/mappingProfiles/userMappingProfile');

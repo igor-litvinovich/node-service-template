@@ -1,5 +1,5 @@
 class UserModel {
-  constructor({ id, tokens, profile }) {
+  constructor(id, tokens, profile) {
     this.id = id;
     this.tokens = tokens;
     this.profile = profile;

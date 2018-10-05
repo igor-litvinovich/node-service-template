@@ -10,6 +10,6 @@ module.exports = [
   {
     name: 'autoMapper',
     instance: AutoMapper,
-    isSingleton: false,
+    isSingleton: true,
   },
 ];
