@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "automapper-ts": "^1.9.0",
     "awilix": "^3.0.1",
     "bcrypt": "^3.0.0",
     "bluebird": "^3.5.0",
